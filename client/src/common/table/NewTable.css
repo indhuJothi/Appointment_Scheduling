@@ -1,0 +1,33 @@
+.table {
+    text-align: center;
+    justify-content: center;
+    margin: 290px 280px;
+    position: absolute;
+    width: 50%;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 3px 1px 5px 5px #888888;
+  }
+  
+  .thead {
+    width: 50px;
+    height: 40px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    background-color:#F0F8FF;
+  }
+  
+  .tbody {
+    font-size: small;
+    width: 30px;
+    align-items: center;
+    height: 50px;
+    text-align: center;
+    background-color:#00B395;
+  }
+  
+  .heading {
+    color: cadetblue;
+  }
+  
