@@ -90,19 +90,97 @@
     left:0
   }
   
-  @media (min-width:600)and (max-width: 100px) {
+  @media screen and (max-width: 700px) {
+
     .base-container {
-      width: 100%;
+      width: 110%;
       margin: auto 70px;
       text-align: center;
-      justify-content: center;
     
     }
-      
-  .form {
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .formheader {
+      font-size: 24px;
+      font-weight: bold;
+      color:black;
+      font-family: "Open Sans", sans-serif;
+    }
+    
+    .form {
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+    }
+    label {
+      font-size: 20px;
+      color:black;
+    }
+    
+    .input {
+      margin-top: 3px;
+      min-width: 18em;
+      height: 25px;
+      padding: 0px 10px;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      background-color: #f3f3f3;
+      border: 0;
+      width:10%;
+      border-radius: 4px;
+      margin-bottom: 31px;
+      justify-content: center;
+    }
+    .MainContainer {
+      margin: 100px 410px;
+      background-color: transparent;
+      padding: 15px 50px 40px;
+      text-align: center;
+      border: 1px solid #ccc;
+      top: 3px;
+      width: 25%;
+      border-radius: 6px;
+      box-shadow: 2px 2px 5px 5px #b8a2a2;
+    }
+    .center {
+      text-align: center;
+    }
+    .button {
+      background-color: thistle;
+      font-family: "Courier New", Courier, monospace;
+      font-size: larger;
+      font-weight: bolder;
+      width: 50%;
+      margin: 2px 0px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: violet;
+    }
+    
+    .submitbtn {
+      font-size: 15px;
+      font-weight: bold;
+      background: #006dcc;
+      color: #fff;
+      margin: 5px 5px;
+      text-align: center;
+      justify-content: center;
+      width: 30%;
+      cursor: pointer;
+    }
+    
+    .error {
+      color: red;
+    }
+    
+    .register{
+      left:0
+    }
   }

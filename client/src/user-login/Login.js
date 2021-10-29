@@ -4,6 +4,14 @@ import { Redirect, withRouter } from "react-router-dom";
 import Header from "../common/Header";
 import "../common/Header.css";
 import baseURL from "../service/api";
+import {
+  Form,
+  Input,
+  TextArea,
+  Button,
+  Select,
+  Container,
+} from "semantic-ui-react";
 
 class Login extends React.Component {
   constructor(props) {
@@ -127,6 +135,7 @@ class Login extends React.Component {
 
   render() {
     return (
+    
       <div data-testid="test-login">
         <Header />
         {sessionStorage.getItem("authToken") ? (
@@ -138,6 +147,7 @@ class Login extends React.Component {
             }}
           >
             <div className="base-container">
+        
               <div class="MainContainer center">
                 <button class="button">Login</button>
                 <button
@@ -150,11 +160,17 @@ class Login extends React.Component {
                 </button>
                 <div className="formheader">Login</div>
                 <p class="error">{this.state.gotoRegister}</p>
+                <Container>
+                  <Form>
+                <Form.Group widths="equal">
                 <div className="form">
+                
                   <div>
-                    <label htmlFor="Mobile">Mobile</label>
-                    <input
-                      className="input"
+                   
+                 <Form.Field
+                      id="form-input-control-first-name"
+                      control={Input}
+                      label="MobileNo"
                       type="text"
                       name="mobile"
                       placeholder="MobileNo"
@@ -166,10 +182,13 @@ class Login extends React.Component {
                     <div class="error">{this.state.mobileErr}</div>
                   </div>
                   <div>
-                    <label htmlFor="password">Password</label>
-                    <input
-                      className="input"
-                      type="password"
+                   
+
+                  
+                    <Form.Field
+                      id="form-input-control-first-name"
+                      control={Input}
+                      label="Password"
                       name="password"
                       placeholder="password"
                       value={this.state.password}
@@ -177,9 +196,13 @@ class Login extends React.Component {
                         this.handleChange(event);
                       }}
                     />
+                   
                     <div class="error">{this.state.passErr}</div>
                   </div>
                 </div>
+                </Form.Group>
+                </Form>
+             </Container>
                 <div>
                   <input
                     type="submit"
@@ -199,6 +222,7 @@ class Login extends React.Component {
 
         {this.state.register && <Redirect to="/register"></Redirect>}
       </div>
+     
     );
   }
 }

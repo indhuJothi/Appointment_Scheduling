@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useHistory} from 'react-router-dom';
 import {
   MDBContainer,
   MDBNavbar,
@@ -19,7 +20,7 @@ import {
 
 export default function Menu() {
   const [showBasic, setShowBasic] = useState(false);
-  const history = History;
+  const history = useHistory();
 
   return (
     <MDBNavbar expand="lg" light bgColor="light">
@@ -44,7 +45,7 @@ export default function Menu() {
               </MDBDropdown>
             </MDBNavbarItem>
           </MDBNavbarNav>
-
+          <button style={{marginRight:30}} onClick={(e)=>{return (sessionStorage.clear(),history.push('/login'))}}>LogOut</button>
           <form className="d-flex input-group w-auto">
             <p style={{ marginRight: 30, fontWeight: "bold" }}>
               {sessionStorage.getItem("user")}

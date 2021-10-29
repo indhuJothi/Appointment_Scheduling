@@ -43,7 +43,8 @@ router.post("/login", async (req, res) => {
     ]);
 
     if (user.rows.length === 0) {
-      return res.status(401), res.send("Not found");
+  
+      return res.send("Not found");
     }
 
     const validPassword = await bcrypt.compare(password, user.rows[0].password);
